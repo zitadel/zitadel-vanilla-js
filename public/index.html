@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Zitadel Vanilla JS SPA</title>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="https://zitadel.com/docs/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://zitadel.com/admin/dashboard" target="_blank" rel="noreferrer">
+        <img src="https://zitadel.com/docs/img/zitadel-logo-dark.svg" alt="Logo" height="40"
+          class="d-inline-block align-text-top" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <div class="position-absolute start-50 translate-middle-x d-flex align-items-center">
+          <i class="fab fa-js fa-lg me-2"></i>
+          <span class="fs-5 fw-bold">Zitadel JS Quickstart</span>
+        </div>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="https://zitadel.com/docs" target="_blank" rel="noreferrer"
+              class="nav-link d-flex align-items-center">
+              <i class="fas fa-book me-1"></i> Docs
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/zitadel" target="_blank" rel="noreferrer"
+              class="nav-link d-flex align-items-center">
+              <i class="fab fa-github me-1"></i> GitHub
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://discord.com/invite/zitadel" target="_blank" rel="noreferrer"
+              class="nav-link d-flex align-items-center">
+              <i class="fab fa-discord me-1"></i> Community
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-4" id="app-container">
+    <div class="d-flex align-items-center mb-3">
+      <button class="btn btn-primary me-2 login-btn" id="login">Login</button>
+      <button class="btn btn-outline-secondary me-2 logout-btn" style="display: none;" id="logout">Logout</button>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-3 shadow-sm">
+          <div class="card-header fw-bold d-flex justify-content-between align-items-center">
+            Decoded Access Token
+            <i class="fas fa-copy text-primary copy-btn" data-target="access_token"
+              style="cursor: pointer; display: none;"></i>
+          </div>
+          <div class="card-body">
+            <pre id="access-token" class="jwt-box">No token generated yet.</pre>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-3 shadow-sm">
+          <div class="card-header fw-bold d-flex justify-content-between align-items-center">
+            Decoded ID Token
+            <i class="fas fa-copy text-primary copy-btn" data-target="id_token"
+              style="cursor: pointer; display: none;"></i>
+          </div>
+          <div class="card-body">
+            <pre id="id-token" class="jwt-box">No token generated yet.</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client-ts/3.3.0/browser/oidc-client-ts.min.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/ui.js"></script>
+</body>
+
+</html>
