@@ -46,8 +46,8 @@ This app uses [oidc-client-ts](https://github.com/authts/oidc-client-ts) to hand
 
 ```js
 const config = {
-    authority: 'https://YOUR_INSTANCE.zitadel.cloud',   // Your Zitadel instance
-    client_id: 'YOUR_CLIENT_ID',                        // Client ID from Zitadel
+    authority: 'https://CUSTOM_DOMAIN',  // Your Zitadel instance
+    client_id: 'CLIENT_ID',                        // Client ID from Zitadel
     redirect_uri: 'http://localhost:4000',             // Redirect URI you set in Zitadel
     post_logout_redirect_uri: 'http://localhost:4000', // Optional logout redirect URL
     response_type: 'code',
