@@ -59,7 +59,7 @@ function decodeJWT(jwt) {
     const parts = jwt.split('.');
 
     if (parts.length !== 3) {
-        throw new Error('Invalid JWT format');
+        return jwt;
     }
 
     // The payload is the second part (index 1)
