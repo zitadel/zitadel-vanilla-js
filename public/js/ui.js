@@ -52,6 +52,13 @@ const updateUI = async () => {
     // Set the JWT token in the display box
     document.getElementById('access-token').textContent = JSON.stringify(decodeJWT(user.access_token), null, 2);
     document.getElementById('id-token').textContent = JSON.stringify(decodeJWT(user.id_token), null, 2);
+    // Show the refresh token section only if a refresh token is present
+    if (user.refresh_token) {
+      $('#refresh-token-box').show();
+      document.getElementById('refresh-token').textContent = user.refresh_token;
+    } else {
+      $('#refresh-token-box').hide();
+    }
   } else {
     $('.copy-btn').hide();
     $('#login').show();
