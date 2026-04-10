@@ -1,3 +1,7 @@
+> [!WARNING]
+> This repository is archived and no longer maintained.
+> For the latest version and active development, please refer to [zitadel/example-auth-expressjs](https://github.com/zitadel/example-auth-expressjs).
+
 ![ZitadelJS](assets/zitadel-js.svg)
 
 # Zitadel JS Quickstart
